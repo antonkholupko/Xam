@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxiParkApp.Views.LocationDetailsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="City:" FontSize="Medium" />
+                <Label Text="{Binding Location.City}" FontSize="Small"/>
+                <Label Text="Country:" FontSize="Medium"/>
+                <Label Text="{Binding Location.Country}" FontSize="Small"/>
+                <Label Text="Temperature:" TextColor="Black" FontSize="14" />
+                <Label Text="{Binding Location.Temperature}" Margin="10,0,0,10"/>
+                <Label Text="Sunrise:" TextColor="Black" FontSize="14" />
+                <Label Text="{Binding Location.Sunrise}" Margin="10,0,0,10" />
+                <Label Text="Sunset:" TextColor="Black" FontSize="14" />
+                <Label Text="{Binding Location.Sunset}" Margin="10,0,0,10"  />
+                <Label Text="Wind Speed:" TextColor="Black" FontSize="14" />
+                <Label Text="{Binding Location.Wind}" Margin="10,0,0,10" />
+                <Label Text="Humidity:" TextColor="Black" FontSize="14" />
+                <Label Text="{Binding Location.Humidity}" Margin="10,0,0,10" />
+                <Button Text="Update data" Clicked="Update_Btn"/>
+                <Button Text="Delete location" Clicked="Delete_Btn"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

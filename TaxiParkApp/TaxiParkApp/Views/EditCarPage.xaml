@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxiParkApp.Views.EditCarPage"
+             Title="Edit Car">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Edit Car" FontSize="Large" />
+            <Label Text="Enter Mark:" FontSize="Medium"/>
+            <Entry Text="{Binding Car.Mark, Mode=TwoWay}" />
+            <Label Text="Enter Model:" FontSize="Medium"/>
+            <Entry Text="{Binding Car.Model, Mode=TwoWay}"/>
+            <Label Text="Enter Color:" FontSize="Medium"/>
+            <Entry Text="{Binding Car.Color, Mode=TwoWay}"/>
+            <Button Text="Edit" Clicked="EditCarBtn_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

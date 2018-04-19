@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxiParkApp.Views.AddCarPage"
+             Title="Add Car">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Add Car" FontSize="Large" />
+                <Label Text="Enter Governmental ID:" FontSize="Medium"/>
+                <Entry Text="{Binding Car.GovId, Mode=TwoWay}" />
+                <Label Text="Enter Mark:" FontSize="Medium"/>
+                <Entry Text="{Binding Car.Mark, Mode=TwoWay}" />
+                <Label Text="Enter Model:" FontSize="Medium"/>
+                <Entry Text="{Binding Car.Model, Mode=TwoWay}"/>
+                <Label Text="Enter Color:" FontSize="Medium"/>
+                <Entry Text="{Binding Car.Color, Mode=TwoWay}"/>
+                <Button Text="Add" Clicked="AddCarBtn_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

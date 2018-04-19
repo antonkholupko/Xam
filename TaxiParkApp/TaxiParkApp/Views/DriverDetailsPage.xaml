@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxiParkApp.Views.DriverDetailsPage"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:xlabs="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             Title="Driver" Appearing="UploadMap">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="{Binding Driver.Photo}" WidthRequest="200" HeightRequest="200"/>
+                <Label Text="First Name:" FontSize="Medium" />
+                <Label Text="{Binding Driver.FirstName}" FontSize="Small"/>
+                <Label Text="Last Name:" FontSize="Medium"/>
+                <Label Text="{Binding Driver.LastName}" FontSize="Small"/>
+                
+                <Label Text="Phone:" FontSize="Medium"/>
+                <Label Text="{Binding Driver.Phone}" FontSize="Small"/>
+                <Label Text="Country:" FontSize="Medium"/>
+                <Label Text="{Binding Driver.Country}" FontSize="Small"/>
+                <Label Text="City:" FontSize="Medium"/>
+                <Label Text="{Binding Driver.City}" FontSize="Small"/>
+                <Label Text="Address:" FontSize="Medium"/>
+                <Label Text="{Binding Driver.Address}" FontSize="Small"/>
+                <StackLayout VerticalOptions="StartAndExpand" Padding="30">
+                    <maps:Map WidthRequest="320" HeightRequest="200"
+                x:Name="MyMap"
+                IsShowingUser="true"
+                MapType="Hybrid"/>
+                </StackLayout>
+
+                <Button Text="Edit" Clicked="ToEditDriverBtn_Clicked"/>
+                <Button Text="Delete" Clicked="DeleteDriverBtn_Clicked"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

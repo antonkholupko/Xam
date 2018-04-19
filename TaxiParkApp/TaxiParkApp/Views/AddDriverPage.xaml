@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxiParkApp.Views.AddDriverPage"
+             Title="Add Driver">
+       <ContentPage.Content>
+            <ScrollView>
+            <StackLayout>
+                <Label Text="Add Driver" FontSize="Large" />
+                    <Label Text="Enter first name:" FontSize="Medium"/>
+                    <Entry Text="{Binding Driver.FirstName, Mode=TwoWay}"/>
+                    <Label Text="Enter second name:" FontSize="Medium"/>
+                    <Entry Text="{Binding Driver.LastName, Mode=TwoWay}"/>
+                    <Label Text="Enter Country:" FontSize="Medium"/>
+                    <Entry Text="{Binding Driver.Country, Mode=TwoWay}"/>
+                    <Label Text="Enter City:" FontSize="Medium"/>
+                    <Entry Text="{Binding Driver.City, Mode=TwoWay}"/>
+                    <Label Text="Enter Address:" FontSize="Medium"/>
+                    <Entry Text="{Binding Driver.Address, Mode=TwoWay}"/>
+                    <Label Text="Enter Phone:" FontSize="Medium"/>
+                    <Entry Text="{Binding Driver.Phone, Mode=TwoWay}"/>
+                    <Button Text="Add photo" Clicked="AddPhotoBtn_Clicked"/>
+                    <Image Source="{Binding Driver.Photo, Mode=TwoWay}" WidthRequest="200" HeightRequest="200"/>
+                    <Button Text="Add" Clicked="AddDriverBtn_Clicked"/>
+            </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

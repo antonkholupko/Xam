@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxiParkApp.Views.CarDetailsPage"
+              Title="Car">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Model:" FontSize="Medium" />
+                <Label Text="{Binding Car.Model}" FontSize="Small"/>
+                <Label Text="Mark:" FontSize="Medium"/>
+                <Label Text="{Binding Car.Mark}" FontSize="Small"/>
+                <Label Text="Color:" FontSize="Medium"/>
+                <Label Text="{Binding Car.Color}" FontSize="Small"/>
+                <Label Text="Govermental id:" FontSize="Medium"/>
+                <Label Text="{Binding Car.GovId}" FontSize="Small"/>
+                <Button Text="Edit" Clicked="ToEditCarBtn_Clicked"/>
+                <Button Text="Delete" Clicked="DeleteCarBtn_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
